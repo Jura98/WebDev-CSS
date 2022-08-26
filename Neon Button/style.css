@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Work+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* f84aa7 <-Neon pink */
+    background: -webkit-radial-gradient(bottom, #31081f, #1b1b3a);
+    background: -moz-radial-gradient(bottom, #31081f, #1b1b3a);
+    background: radial-gradient(bottom, #31081f, #1b1b3a);
+}
+
+button {
+    position: relative;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    padding: 1.5rem 4.5rem;
+    font-size: 3.5em;
+    background: transparent;
+    border: 2px solid #ffe4f3;
+    border-radius: 1rem;
+    color: #ffeff7;
+
+    -webkit-box-shadow: 0px 0px 44px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
+    -moz-box-shadow: 0px 0px 44px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
+    box-shadow: inset 0px 0px 20px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
+    text-shadow: 0 0 0.125em rgba(248, 74, 167, 1);
+}
+
+
+
+button:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+    background-color: #f84aa7;
+    border: 0;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f84aa7;
+    border-radius: 1rem;
+    filter: blur(2em);
+    opacity: 0;
+    transition: opacity linear 0.1s;
+    z-index: -1;
+}
+
+button:hover::after {
+    opacity: 1;
+}
